@@ -50,7 +50,7 @@ function Update(){
       //console.log(form_data,id);
       try {
         setisLoading(true);
-        const response = await fetch(`http://127.0.0.1:7000/api/question/updatequestion/${id}`, {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/question/updatequestion/${id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
